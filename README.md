@@ -24,6 +24,12 @@ scrapy
 scrapy startproject bookscraper
 ```
 
+### Generate a Spider
+
+```sh
+scrapy genspider bookspider books.toscrape.com
+```
+
 ### Run the Scraper
 
 ```sh
