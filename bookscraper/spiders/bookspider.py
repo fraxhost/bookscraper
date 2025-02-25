@@ -21,11 +21,6 @@ class BookspiderSpider(scrapy.Spider):
                 relative_url = 'https://books.toscrape.com/catalogue/' + relative_url
 
             yield response.follow(relative_url, callback = self.parse_book_page)
-            # yield {
-            #     'name': book.css('h3 a::text').get(),
-            #     'price': book.css('.product_price .price_color::text').get(),
-            #     'url': book.css('h3 a').attrib['href']
-            # }
 
         next_page = response.css('li.next a::attr(href)').get()
 

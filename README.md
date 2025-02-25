@@ -36,15 +36,26 @@ scrapy genspider bookspider books.toscrape.com
 scrapy crawl bookspider
 ```
 
-### Save Scraped Data to a File
+### Save Scraped Data to a File (Append)
+
+Append
 
 ```sh
 scrapy crawl bookspider -o bookdata.csv
 ```
 
+Overwrite
+
+```sh
+scrapy crawl bookspider -O bookdata.csv
+```
+
+We can change type of output with extensions.
+bookdata.csv for csv output. bookdata.json for json output.
+
 ## Project Structure
 
-```
+```plaintext
 bookscraper/
 │── bookscraper/             # Project directory
 │   ├── spiders/             # Contains your web crawlers
@@ -56,9 +67,11 @@ bookscraper/
 ## Usage
 
 1. Navigate to the project directory:
+
    ```sh
    cd bookscraper
    ```
+
 2. Run the scraper using one of the commands above.
 
 ## Requirements
